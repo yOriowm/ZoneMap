@@ -62,9 +62,9 @@ window.addEventListener('load', function () {
         '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
         '</div><div id="minimap-config" style="line-height:20px;">' +
-        '<span id="hide-map" style="cursor:pointer;">Haritayı Sakla' +
-        '</span> | <span id="follow-mouse" style="cursor:pointer;">Fareyi Takip Et' +
-        '</span> | Yakınlaştır: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">+</span>  /  ' +
+        '<span id="hide-map" style="cursor:pointer;">Hide minimap' +
+        '</span> | <span id="follow-mouse" style="cursor:pointer;"Follow mous' +
+        '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">+</span>  /  ' +
         '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">-</span>' +
         '</div>' +
         '</div>';
@@ -280,7 +280,7 @@ function loadTemplates() {
         if (zooming_in == false && zooming_out == false) {
             document.getElementById("minimap-box").style.display = "none";
             document.getElementById("minimap-text").style.display = "block";
-            document.getElementById("minimap-text").innerHTML = "Burada Şablon Bulunamadı";
+            document.getElementById("minimap-text").innerHTML = "No template nearby.";
         }
     } else {
         document.getElementById("minimap-box").style.display = "block";
