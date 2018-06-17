@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Pixelzone Minimap
 // @namespace    http://tampermonkey.net/
-// @version      Beta 1.0
+// @version      1.1
 // @description  Pixelzone Minimap
 // @author       olegispe#2453
 // @match        https://pixelzone.io/*
