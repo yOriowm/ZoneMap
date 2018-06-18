@@ -19,5 +19,12 @@
     "y": -505,
     "width": 327,
     "height": 217
+  },
+  "Marx": {
+    "name": "marx.png",
+    "x": 737,
+    "y": 915,
+    "width": 182,
+    "height": 110
   }
 }
