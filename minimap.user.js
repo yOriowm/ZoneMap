@@ -18,7 +18,7 @@ Number.prototype.between = function(a, b) {
   return this > min && this < max;
 };
 
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/getulix/ZoneMap/master';
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/getulixbr/ZoneMap/master/';
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates out of URL
