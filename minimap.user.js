@@ -17,7 +17,7 @@ Number.prototype.between = function(a, b) {
     max = Math.max.apply(Math, [a, b]);
   return this > min && this < max;
 };
-
+var range = 25;
 window.baseTepmlateUrl = 'https://raw.githubusercontent.com/getulixbr/ZoneMap/master/';
 
 window.addEventListener('load', function () {
@@ -176,7 +176,7 @@ function updateloop() {
     console.log("Updating Template List");
     // Get JSON of available templates
     var xmlhttp = new XMLHttpRequest();
-    var url = window.baseTepmlateUrl + "/templates/data.json";
+    var url = window.baseTepmlateUrl + "/templates/data.json?" + new Date().getTime();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             template_list = JSON.parse(this.responseText);
@@ -270,7 +270,9 @@ function loadTemplates() {
         var temp_yb = parseInt(template_list[template]["y"]) + parseInt(template_list[template]["height"]);
         // if (temp_xr <= x_left || temp_yb <= y_top || temp_x >= x_right || temp_y >= y_bottom)
         //    continue
-        if (!x_window.between(temp_x, temp_xr) && !y_window.between(temp_y, temp_yb))
+        if (!x_window.between(temp_x-range*1, temp_xr+range*1))
+            continue
+        if (!y_window.between(temp_y-range*1, temp_yb+range*1))
             continue
         console.log("Template " + template + " is in range!");
         // console.log(x_window, y_window);
